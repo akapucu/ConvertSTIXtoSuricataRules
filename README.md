@@ -24,8 +24,8 @@ Options:
   -c <conf_file_path>  to take the configuration file path
 
 Extracting Options:
-  --hash             to enable extracting file hashes from the feed
-  --ip               to enable extracting IP addresses from the feed
-  --domain           to enable extracting domain names from the feed
-  --url              to enable extracting URLs from the feed
-  --all              to enable extracting all four types at once from the feed
+  --hash             to enable extracting file hashes from the feed <br />
+  --ip               to enable extracting IP addresses from the feed <br />
+  --domain           to enable extracting domain names from the feed <br />
+  --url              to enable extracting URLs from the feed <br />
+  --all              to enable extracting all four types at once from the feed <br />
