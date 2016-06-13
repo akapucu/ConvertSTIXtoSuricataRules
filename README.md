@@ -20,8 +20,8 @@ MD5 hash blacklist with newest threats' hash values.
 Usage: stix_to_rule.py [options]
 
 Options:
-  -h, --help           show this help message and exit
-  -c <conf_file_path>  to take the configuration file path
+  *-h, --help*         show this help message and exit <br />
+  *-c <conf_file_path>*  to take the configuration file path
 
 Extracting Options: <br />
   --hash             to enable extracting file hashes from the feed <br />
