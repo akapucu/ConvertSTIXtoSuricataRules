@@ -20,21 +20,21 @@ MD5 hash blacklist with newest threats' hash values.
 Usage: stix_to_rule.py [options]
 
 Options:
-  *-h, --help*         show this help message and exit <br />
-  *-c <conf_file_path>*  to take the configuration file path
+  **-h, --help**         show this help message and exit <br />
+  **-c <conf_file_path>**  to take the configuration file path
 
 Extracting Options: <br />
-  --hash             to enable extracting file hashes from the feed <br />
-  --ip               to enable extracting IP addresses from the feed <br />
-  --domain           to enable extracting domain names from the feed <br />
-  --url              to enable extracting URLs from the feed <br />
-  --all              to enable extracting all four types at once from the feed <br />
+__--hash             to enable extracting file hashes from the feed <br />
+__--ip               to enable extracting IP addresses from the feed <br />
+__--domain           to enable extracting domain names from the feed <br />
+__--url              to enable extracting URLs from the feed <br />
+__--all              to enable extracting all four types at once from the feed <br />
   
 Poll Options: <br />
-  --since-last-poll  to enable polling feeds available after last poll time, <br />
+__--since-last-poll  to enable polling feeds available after last poll time, <br />
                      in this case, start_time is set to the value in 'last_poll_time' <br />
                      and end_time is set to be the current time <br />
-  --start-time=date  to specify the date from which to poll the feed, format <br />
+__--start-time=date  to specify the date from which to poll the feed, format <br />
                      2000-12-30T00:00:00Z <br />
-  --end-time=date    to specify the date till which to poll the feed, <br />
+__--end-time=date    to specify the date till which to poll the feed, <br />
                      format: 2000-12-30T00:00:00Z <br />
