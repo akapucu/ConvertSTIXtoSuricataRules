@@ -1,0 +1,24 @@
+Usage: stix_to_rule.py [options]
+
+Options:
+  -h, --help           show this help message and exit
+  -c <conf_file_path>  to take the configuration file path
+
+  Extracting Options:
+    --hash             to enable extracting file hashes from the feed
+    --ip               to enable extracting IP addresses from the feed
+    --domain           to enable extracting domain names from the feed
+    --url              to enable extracting URLs from the feed
+    --all              to enable extracting all four types at once from the
+                       feed
+
+  Poll Options:
+    --since-last-poll  to enable polling feeds available after last poll time,
+                       in this case, start_time is set to the value in
+                       'last_poll_time' and end_time is set to be the current
+                       time
+    --start-time=date  to specify the date from which to poll the feed, format
+                       2000-12-30T00:00:00Z
+    --end-time=date    to specify the date till which to poll the feed,
+                       format: 2000-12-30T00:00:00Z
+                    
