@@ -1,5 +1,5 @@
 #!/usr/bin/python
-
+#This script has used some part of TAXIIExample.py from Soltra
 
 import optparse
 import ConfigParser
