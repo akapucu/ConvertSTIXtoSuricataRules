@@ -1,6 +1,6 @@
 # ConvertSTIXtoSuricataRules
 
-[General Information]
+**[General Information]**
 
 This script is able to extract IP addresses in a feed and make a rule at which a list of IP addresses is matched. Every time a 
 feed is polled and IP addresses are extracted, that list of IP addresses, namely the blacklist will grow. This rule will enable
