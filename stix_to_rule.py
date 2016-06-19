@@ -61,7 +61,7 @@ xmlstart = """<?xml version="1.0" encoding="UTF-8" ?>"""
 boilerplate = """xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:taxii_11="http://taxii.mitre.org/messages/taxii_xml_binding-1.1" xsi:schemaLocation="http://taxii.mitre.org/messages/taxii_xml_binding-1.1 http://taxii.mitre.org/messages/taxii_xml_binding-1.1" """
 
 
-message_id = str(random.randint(345271,9999999999))
+message_id = str(random.randint(345271,9999999))
 
 
 user_pwd = config.get('feed_options','service_username') + ":" + config.get('feed_options','service_password')
@@ -219,7 +219,7 @@ if opts.extract_url or opts.extract_all:
 				host_part = stripped_url[:pos]
 				uri_part = stripped_url[pos:]		
 					
-			url_file_handle.write("\n" + "alert http any any -> any any (msg:\"Malicious site visit attempt\"; content:\"" + host_part+ "\"; http_header; content:\"" + uri_part + "\"; http_uri; sid:" + str(random.randint(345271,9999999999)) + ";)" + "\n")
+			url_file_handle.write("\n" + "alert http any any -> any any (msg:\"Malicious site visit attempt\"; content:\"" + host_part+ "\"; http_header; content:\"" + uri_part + "\"; http_uri; sid:" + str(random.randint(345271,9999999)) + ";)" + "\n")
 	
 	url_file_handle.close()
 
