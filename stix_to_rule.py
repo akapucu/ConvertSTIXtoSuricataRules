@@ -195,7 +195,7 @@ if opts.extract_domain or opts.extract_all:
 	for domain_object in root.findall(".//{http://cybox.mitre.org/objects#DomainNameObject-1}Value"):
 		if domain_object.attrib['condition'] == "Equals":
 			stripped_domain = re.sub(domain_stripped_regex,'',domain_object.text)
-			dns_file_handle.write("\nalert dns any 53 -> any any (msg:" + "\"Malicious resolution attempt\";dns_query; content:\"" + stripped_domain + "\"; nocase; sid:" + str(random.randint(3000000,4000000)) + ";)\n")
+			dns_file_handle.write("\nalert dns any any -> any 53 (msg:" + "\"Malicious resolution attempt\";dns_query; content:\"" + stripped_domain + "\"; nocase; sid:" + str(random.randint(3000000,4000000)) + ";)\n")
 	
 	dns_file_handle.close()
 
