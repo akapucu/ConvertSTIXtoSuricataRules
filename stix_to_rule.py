@@ -191,7 +191,7 @@ hash_stripped_regex = '^[^a-fA-F0-9]*|[^a-fA-F0-9]*$'
 if opts.extract_domain or opts.extract_all:
 	dns_filename = config.get("output_files","dns_rules_file")
 	dns_file_handle = open(dns_filename,"a+")
-	dns_file_handle.write("\n\n" + str(datetime.datetime.now()) + "\n") #datetime.datetime.now().isoformat()
+	#dns_file_handle.write("\n\n" + str(datetime.datetime.now()) + "\n") #datetime.datetime.now().isoformat()
 	for domain_object in root.findall(".//{http://cybox.mitre.org/objects#DomainNameObject-1}Value"):
 		if domain_object.attrib['condition'] == "Equals":
 			stripped_domain = re.sub(domain_stripped_regex,'',domain_object.text)
@@ -203,7 +203,7 @@ if opts.extract_domain or opts.extract_all:
 if opts.extract_url or opts.extract_all:
 	url_filename = config.get("output_files","url_rules_file")
 	url_file_handle = open(url_filename,"a+")
-	url_file_handle.write("\n\n" + str(datetime.datetime.now()) + "\n") #datetime.datetime.now().isoformat()
+	#url_file_handle.write("\n\n" + str(datetime.datetime.now()) + "\n") #datetime.datetime.now().isoformat()
 	for url_object in root.findall(".//{http://cybox.mitre.org/objects#URIObject-2}Value"):
 		if url_object.attrib['condition'] == "Equals":
 			stripped_url = re.sub(url_stripped_regex,'',url_object.text)
@@ -227,7 +227,7 @@ if opts.extract_url or opts.extract_all:
 if opts.extract_ip or opts.extract_all:
 	ip_blacklist_filename = config.get("output_files","ip_blacklist_file")
 	ip_file_handle = open(ip_blacklist_filename,"a+")
-	ip_file_handle.write("\n\n" + str(datetime.datetime.now()) + "\n") #datetime.datetime.now().isoformat()
+	#ip_file_handle.write("\n\n" + str(datetime.datetime.now()) + "\n") #datetime.datetime.now().isoformat()
 	for ip_object in root.findall(".//{http://cybox.mitre.org/objects#AddressObject-2}Address_Value"):
 		if ip_object.attrib['condition'] == "Equals" or ip_object.attrib['condition'] == "InclusiveBetween":
 			stripped_ip = re.sub(ip_stripped_regex,'',ip_object.text)
@@ -240,7 +240,7 @@ if opts.extract_ip or opts.extract_all:
 if opts.extract_hash or opts.extract_all:
 	hash_blacklist_filename = config.get("output_files","hash_blacklist_file")
 	hash_file_handle = open(hash_blacklist_filename,"a+")
-	hash_file_handle.write("\n\n" + str(datetime.datetime.now()) + "\n") #datetime.datetime.now().isoformat()
+	#hash_file_handle.write("\n\n" + str(datetime.datetime.now()) + "\n") #datetime.datetime.now().isoformat()
 	for hash_object in root.findall(".//{http://cybox.mitre.org/common-2}Hash"):
 		if hash_object.find("{http://cybox.mitre.org/common-2}Type").text == "MD5":
 			if hash_object.find(".{http://cybox.mitre.org/common-2}Simple_Hash_Value").attrib['condition'] == "Equals":
